@@ -17,7 +17,7 @@ interface FooterProps {
 
 const FacebookIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
   </svg>
 );
 
@@ -31,13 +31,13 @@ const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
 
 const YoutubeIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
 const LinkedinIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>
 );
 
@@ -86,7 +86,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
       {/* Main Multi-Column Footer Content */}
       <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 xl:gap-14">
-          
+
           {/* Column 1: Brand & Firm Summary (Span 4) */}
           <div className="lg:col-span-4 space-y-5">
             <div className="inline-block bg-white p-3 rounded-lg shadow-md">
@@ -202,23 +202,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
               <h4 className="text-sm font-extrabold uppercase tracking-wider text-white">
                 Office Locations
               </h4>
-              <button
-                onClick={() => scrollTo('contact')}
-                className="text-[11px] text-[#2D8CFF] hover:underline font-bold inline-flex items-center gap-1"
-              >
-                View on Map <ExternalLink className="w-3 h-3" />
-              </button>
+
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
+
               {/* Location 1: Los Angeles Office */}
               <div className="bg-[#0C2A59]/70 border border-blue-900/80 rounded-xl p-4 space-y-2.5">
                 <div className="flex items-center gap-2 text-white font-extrabold text-xs uppercase tracking-wide">
                   <MapPin className="w-4 h-4 text-[#2D8CFF] flex-shrink-0" />
                   <span>Los Angeles Office</span>
                 </div>
-                
+
                 <p className="text-xs text-blue-100 leading-relaxed font-medium">
                   5120 West Goldleaf Circle, #380<br />
                   Los Angeles, CA 90056
@@ -247,7 +242,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
                   <MapPin className="w-4 h-4 text-[#2D8CFF] flex-shrink-0" />
                   <span>Rancho Office</span>
                 </div>
-                
+
                 <p className="text-xs text-blue-100 leading-relaxed font-medium">
                   8350 Archibald Avenue, CA, #206<br />
                   Rancho Cucamonga, CA 91370
@@ -284,7 +279,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
       {/* Bottom Sub-Footer: Copyright, Legal Docs & Disclaimer */}
       <div className="w-full bg-[#041226] border-t border-blue-950 py-5">
         <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-zinc-400">
-          
+
           <div className="space-y-1">
             <p>
               Copyright &copy; 2026 Mallery &amp; Stern, APC. All rights reserved.

@@ -225,17 +225,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
               return (
                 <div
                   key={idx}
-                  className="bg-[#F9FAFB] border border-zinc-200 rounded-xl p-6 space-y-4 hover:border-[#0E336B] transition-colors shadow-sm"
+                  className="bg-[#F9FAFB] border border-zinc-200 rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-4 hover:border-[#2D8CFF] hover:shadow-md transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-[#0E336B] text-white flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-[#2D8CFF]" />
+                  <div className="flex items-center justify-center">
+                    <Icon className="w-14 h-14 sm:w-16 sm:h-16 text-[#2D8CFF] transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-extrabold text-lg text-[#0E336B] tracking-tight">
+                  <h3 className="font-extrabold text-lg sm:text-xl text-[#0E336B] tracking-tight">
                     {area.title}
                   </h3>
-                  <p className="text-xs text-zinc-600 leading-relaxed">
-                    {area.desc}
-                  </p>
                 </div>
               );
             })}
