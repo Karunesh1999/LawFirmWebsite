@@ -19,142 +19,36 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
   return (
     <div className="w-full bg-[#FFFFFF] text-[#1F2937]">
       {/* ======================================================== */}
-      {/* 1. HERO SECTION (Full Window Width + Modern Glass Skyscraper */}
-      {/*    Aesthetic inspired by "Dedicated to higher standards" +   */}
-      {/*    Lady Justice silhouette in sleek subtle black/charcoal +  */}
-      {/*    Original tagline: "WE'RE THE WORKERS' COMPENSATION        */}
-      {/*    SPECIALISTS THAT can help you")                           */}
+      {/* 1. HERO SECTION (Exact User-Uploaded Image + Full Window Width) */}
+      {/* - Image: public/hero_banner.jpg (Marble background +      */}
+      {/*   Deep Navy wave + Sleek Black Lady Justice)             */}
+      {/* - Left Side: Original Tagline, Heading, Cursive & CTAs   */}
+      {/* - Full Window Width (w-full edge-to-edge)                */}
       {/* ======================================================== */}
       <section
         id="hero"
-        className="relative w-full min-h-[640px] sm:min-h-[700px] lg:min-h-[760px] flex items-center overflow-hidden bg-[#050D1A] text-white scroll-mt-24"
+        className="relative w-full overflow-hidden bg-[#F8F9FA] scroll-mt-24 border-b border-zinc-200"
       >
-        {/* Full-Width Background: Modern Glass Skyscraper Looking Up */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-            alt="Corporate skyscraper modern architectural glass facade"
-            className="w-full h-full object-cover object-center scale-105"
-          />
-          {/* Deep Cinematic Black & Navy Blue Gradient Vignette matching "Dedicated to higher standards" */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#030914] via-[#061224]/92 to-[#040C1A]/75"></div>
-          {/* Vertical subtle architectural darkening */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-[#030914]/80"></div>
-          {/* Subtle noise/grid architectural atmosphere */}
-          <div
-            className="absolute inset-0 opacity-15 pointer-events-none"
-            style={{
-              backgroundImage: 'radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px)',
-              backgroundSize: '32px 32px'
-            }}
-          ></div>
-        </div>
+        {/* Full Window Width Container (edge-to-edge) */}
+        <div className="relative w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] xl:min-h-[780px] flex items-center overflow-hidden">
 
-        {/* Lady Justice Silhouette on Right: Styled in Sleek Subtle Black / Charcoal */}
-        <div className="absolute right-0 bottom-0 top-0 w-full sm:w-2/3 lg:w-1/2 pointer-events-none z-10 flex items-center justify-end pr-4 sm:pr-8 lg:pr-16 xl:pr-24 overflow-hidden">
-          {/* Subtle back-glow behind Lady Justice to give depth */}
-          <div className="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
+          {/* Exact User-Uploaded Image as Full-Width Background */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/hero_banner.jpg"
+              alt="Mallery & Stern - Work Injury Attorneys Hero"
+              className="w-full h-full object-cover object-right sm:object-center select-none pointer-events-none"
+            />
+            {/* Subtle soft gradient on left for ultra-clean text legibility on small screens */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent sm:via-white/40 lg:to-transparent pointer-events-none"></div>
+          </div>
 
-          <svg
-            viewBox="0 0 340 500"
-            className="w-auto h-[85%] max-h-[660px] opacity-95 drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
-            fill="none"
-          >
-            {/* Lady Justice in sleek subtle black/obsidian tones (#0D131C / #17202D) */}
-            <defs>
-              <linearGradient id="justiceBlackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#1E2837" />
-                <stop offset="50%" stopColor="#0F1622" />
-                <stop offset="100%" stopColor="#080C14" />
-              </linearGradient>
-              <linearGradient id="swordSteel" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#94A3B8" />
-                <stop offset="100%" stopColor="#334155" />
-              </linearGradient>
-              <linearGradient id="scalesGold" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#E2E8F0" />
-                <stop offset="50%" stopColor="#94A3B8" />
-                <stop offset="100%" stopColor="#475569" />
-              </linearGradient>
-            </defs>
+          {/* Full-Width Content Layer (Tagline, Heading, Cursive & CTAs) */}
+          <div className="w-full relative z-10 px-6 sm:px-12 lg:px-20 xl:px-28 py-16 sm:py-24 lg:py-28 flex items-center">
+            <div className="max-w-2xl xl:max-w-3xl space-y-5">
 
-            <g>
-              {/* Upraised Right Arm holding Balance Scales */}
-              <path
-                d="M 195 90 L 250 45 L 265 58 L 215 105 Z"
-                fill="url(#justiceBlackGrad)"
-                stroke="#2A374A"
-                strokeWidth="1"
-              />
-              {/* Hand clasping the scales */}
-              <ellipse cx="258" cy="50" rx="9" ry="7" fill="url(#justiceBlackGrad)" />
-
-              {/* Head with Classical Hair & Blindfold */}
-              <circle cx="178" cy="100" r="24" fill="url(#justiceBlackGrad)" />
-              {/* Blindfold wrap */}
-              <path
-                d="M 158 95 Q 178 90 198 95 L 198 106 Q 178 101 158 106 Z"
-                fill="#E2E8F0"
-                opacity="0.85"
-              />
-
-              {/* Torso & Cascading Classical Robes in sleek obsidian black */}
-              <path
-                d="M 155 125 C 162 165 145 220 135 280 C 122 340 108 410 95 500 L 255 500 C 250 410 238 340 225 260 C 215 200 208 150 200 125 Z"
-                fill="url(#justiceBlackGrad)"
-                stroke="#1E2837"
-                strokeWidth="1.5"
-              />
-
-              {/* Robe pleats & flowing shadow lines */}
-              <path d="M 160 135 Q 175 220 165 310 Q 155 400 140 500" stroke="#253245" strokeWidth="2.5" />
-              <path d="M 180 135 Q 190 220 185 320 Q 180 410 175 500" stroke="#253245" strokeWidth="2" />
-              <path d="M 198 135 Q 208 240 210 330 Q 212 420 215 500" stroke="#253245" strokeWidth="2" />
-              <path d="M 148 200 Q 178 220 208 200" stroke="#253245" strokeWidth="2" />
-
-              {/* Left Arm holding the Sword of Justice */}
-              <path
-                d="M 155 138 L 115 175 L 122 192 L 155 160 Z"
-                fill="url(#justiceBlackGrad)"
-                stroke="#2A374A"
-                strokeWidth="1"
-              />
-              <circle cx="118" cy="182" r="8" fill="url(#justiceBlackGrad)" />
-
-              {/* Sword hilt & sharp steel blade */}
-              <rect x="105" y="180" width="28" height="4" rx="2" fill="url(#swordSteel)" />
-              <line x1="119" y1="170" x2="119" y2="180" stroke="url(#swordSteel)" strokeWidth="4" />
-              <polygon points="116,184 122,184 120,320 118,320" fill="url(#swordSteel)" />
-
-              {/* Scales of Justice Beam in refined metallic steel */}
-              <line x1="210" y1="42" x2="305" y2="65" stroke="url(#scalesGold)" strokeWidth="4" strokeLinecap="round" />
-              <circle cx="258" cy="53" r="5" fill="#E2E8F0" />
-
-              {/* Left Scale Pan & Strings */}
-              <line x1="216" y1="46" x2="208" y2="115" stroke="#94A3B8" strokeWidth="1.2" />
-              <line x1="226" y1="48" x2="232" y2="115" stroke="#94A3B8" strokeWidth="1.2" />
-              <path d="M 195 115 Q 220 135 245 115 Z" fill="url(#justiceBlackGrad)" stroke="#64748B" strokeWidth="1.5" />
-
-              {/* Right Scale Pan & Strings */}
-              <line x1="290" y1="64" x2="284" y2="135" stroke="#94A3B8" strokeWidth="1.2" />
-              <line x1="300" y1="66" x2="308" y2="135" stroke="#94A3B8" strokeWidth="1.2" />
-              <path d="M 272 135 Q 296 155 320 135 Z" fill="url(#justiceBlackGrad)" stroke="#64748B" strokeWidth="1.5" />
-            </g>
-          </svg>
-        </div>
-
-        {/* Full-Width Content Container */}
-        <div className="w-full relative z-20 px-6 sm:px-12 lg:px-20 xl:px-28 py-16 sm:py-24 lg:py-32">
-          <div className="max-w-3xl space-y-6">
-            {/* Kicker badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-widest text-blue-200">
-              <span className="w-2 h-2 rounded-full bg-[#2ECC71] animate-pulse"></span>
-              <span>Representing California Injured Workers Since 1976</span>
-            </div>
-
-            {/* Tagline Heading from Image 2 */}
-            <div className="space-y-1">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight uppercase leading-[1.04] font-display drop-shadow-lg">
+              {/* Exact Tagline Heading from Reference Image */}
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#0E336B] tracking-tight uppercase leading-[1.04] font-display drop-shadow-sm">
                 We're The <br />
                 Workers' <br />
                 Compensation <br />
@@ -162,54 +56,56 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
               </h1>
 
               {/* Cursive script "can help you" with Green Underline */}
-              <div className="pt-2">
-                <span className="text-4xl sm:text-6xl lg:text-7xl text-blue-100 font-serif italic tracking-wide lowercase inline-block relative pr-6">
+              <div className="pt-1">
+                <span className="text-4xl sm:text-6xl lg:text-7xl text-[#1E3A8A] font-serif italic tracking-wide lowercase inline-block relative pr-6">
                   can help you
-                  <span className="block w-full h-1.5 bg-[#2ECC71] mt-1.5 rounded-full shadow-[0_0_12px_rgba(46,204,113,0.8)]"></span>
+                  <span className="block w-full h-1.5 bg-[#2ECC71] mt-1.5 rounded-full shadow-[0_0_10px_rgba(46,204,113,0.7)]"></span>
                 </span>
               </div>
-            </div>
 
-            {/* Description Text */}
-            <p className="text-base sm:text-lg text-zinc-300 pt-3 max-w-2xl leading-relaxed font-normal">
-              When our team is focused on your recovery and rights, you will find our dedication to your case exceeds that of any other law firm you've worked with in the past. If you've been injured on the job in Los Angeles, Riverside, or San Bernardino County, we are here for you.
-            </p>
+              {/* Description Text */}
+              <p className="text-sm sm:text-base text-zinc-800 pt-2 max-w-xl leading-relaxed font-medium">
+                Have you been injured on the job in Los Angeles, Riverside, or San Bernardino County? Get aggressive, compassionate legal representation with no upfront fees.
+              </p>
 
-            {/* Action CTA Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
-              <button
-                onClick={onOpenQuote}
-                className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded shadow-2xl transition-all duration-200 active:scale-95 flex items-center gap-2 border border-blue-400/40"
-              >
-                <span>Request Free Case Consultation</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              {/* Action CTA Buttons */}
+              <div className="pt-3 flex flex-wrap items-center gap-4">
+                <button
+                  onClick={onOpenQuote}
+                  className="bg-[#0E336B] hover:bg-[#123E80] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md shadow-xl transition-all duration-200 active:scale-95 flex items-center gap-2"
+                >
+                  <span>Request Free Case Consultation</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
 
-              <a
-                href="tel:3104730777"
-                className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded backdrop-blur-md transition-all"
-              >
-                <Phone className="w-4 h-4 text-[#2ECC71]" />
-                <span>Call: 310-473-0777</span>
-              </a>
-            </div>
-
-            {/* Trust Points Row */}
-            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 sm:gap-8 text-xs font-semibold text-zinc-400">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
-                <span className="text-zinc-200">No Recovery, No Fee</span>
+                <a
+                  href="tel:3104730777"
+                  className="inline-flex items-center gap-2.5 bg-white/95 hover:bg-white border-2 border-[#0E336B] text-[#0E336B] font-extrabold text-xs sm:text-sm uppercase tracking-wider px-6 py-4 rounded-md shadow-md transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[#2ECC71]" />
+                  <span>Call: 310-473-0777</span>
+                </a>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
-                <span className="text-zinc-200">Rated by Super Lawyers 10 Years</span>
+
+              {/* Credibility Guarantee Row */}
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-bold text-[#0E336B]">
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <span>No Recovery, No Fee</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <span>Rated by Super Lawyers 10 Years</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <span>Se Habla Español</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
-                <span className="text-zinc-200">Se Habla Español</span>
-              </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
