@@ -33,7 +33,7 @@ export function App() {
 
         {/* Legal Copyright Footer Bar */}
         <footer className="bg-[#09234B] text-zinc-300 py-6 border-t border-blue-950 text-xs">
-          <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <p className="text-zinc-400">
               &copy; {new Date().getFullYear()} Mallery &amp; Stern. Work Injury Attorneys. All rights reserved.
             </p>

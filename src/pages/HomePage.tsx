@@ -113,9 +113,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 2. MISSION / INTRO STATEMENT (Exact Match to Image 3) */}
       {/* ======================================================== */}
       <section id="mission" className="py-20 bg-[#FFFFFF] scroll-mt-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-8 text-center space-y-8">
+        <div className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 text-center space-y-8">
           {/* Paragraph 1 matching Image 3 */}
-          <p className="text-lg sm:text-2xl text-[#1F2937] font-normal leading-relaxed">
+          <p className="text-lg sm:text-2xl text-[#1F2937] font-normal leading-relaxed max-w-6xl mx-auto">
             To injured workers across the <strong className="font-bold text-[#0E336B]">Los Angeles, San Bernardino, and Riverside Counties</strong>, Mallery &amp; Stern is the one law firm specializing in Workers' Compensation who brings top quality assistance to all their clients, representing those who are injured at work or from work-related activities, such as physical and emotional injuries suffered from negligence and defective products, so that injured workers get a fair and reasonable benefit from their employment insurance!
           </p>
 
@@ -128,7 +128,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
 
           {/* Required California Legal Warning Disclaimer (Image 3) */}
           <div className="pt-4 border-t border-zinc-200">
-            <p className="text-xs sm:text-sm text-zinc-500 italic max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm text-zinc-500 italic max-w-4xl mx-auto leading-relaxed">
               ***Making a false or fraudulent workers' compensation claim is a felony subject to up to 5 years in prison or a fine of up to $50,000 or double the value of the fraud, whichever is greater or by both imprisonment and fine.***
             </p>
           </div>
@@ -139,7 +139,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 3. "WE ARE HERE FOR YOU" (Exact Match to Image 4) */}
       {/* ======================================================== */}
       <section id="about" className="py-20 bg-[#F9FAFB] border-y border-zinc-200 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Heading & Text matching Image 4 */}
             <div className="lg:col-span-6 space-y-6">
@@ -231,8 +231,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 4. PRACTICE AREAS / LEGAL SPECIALIZATIONS */}
       {/* ======================================================== */}
       <section id="services" className="py-20 bg-white scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#2D8CFF]">
               What We Do
             </span>
@@ -293,7 +293,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 5. RETAIN REPRESENTATION & OFFICE LOCATIONS (Image 5) */}
       {/* ======================================================== */}
       <section id="contact" className="py-20 bg-[#F3F4F6] border-t border-zinc-200 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column: RETAIN EXPERIENCED REPRESENTATION matching Image 5 */}
             <div id="representation" className="lg:col-span-6 space-y-6">
@@ -413,7 +413,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 6. COMMON WORKERS' COMP Q&A (FAQ) */}
       {/* ======================================================== */}
       <section id="qa" className="py-20 bg-white scroll-mt-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-8 space-y-12">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 space-y-12">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#2D8CFF]">
               Workers' Comp Questions
@@ -423,7 +423,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="max-w-5xl mx-auto space-y-4">
             {[
               {
                 q: 'What should I do immediately after getting injured at work?',
@@ -459,8 +459,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 7. RESOURCES SECTION (For Navbar "RESOURCES") */}
       {/* ======================================================== */}
       <section id="resources" className="py-20 bg-[#F9FAFB] border-t border-zinc-200 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#2D8CFF]">
               Legal Knowledge &amp; Guidance
             </span>
@@ -534,8 +534,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 8. BLOG / LEGAL INSIGHTS (For Navbar "BLOG") */}
       {/* ======================================================== */}
       <section id="blog" className="py-20 bg-white border-t border-zinc-200 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#2D8CFF]">
               Legal Insights &amp; Updates
             </span>
@@ -604,7 +604,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* 9. CLIENT TESTIMONIALS (Exact Match to Image 1 Nav item) */}
       {/* ======================================================== */}
       <section id="testimonials" className="py-20 bg-[#0E336B] text-white scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 space-y-12">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-blue-200">
               Verified Client Outcomes
