@@ -19,100 +19,194 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
   return (
     <div className="w-full bg-[#FFFFFF] text-[#1F2937]">
       {/* ======================================================== */}
-      {/* 1. HERO SECTION (Exact Match to Image 2) */}
-      {/* - Top: Marble Texture Pattern */}
-      {/* - Bottom: Deep Navy Blue Wave Banner (#0E336B) */}
-      {/* - Right: Lady Justice Sky-Blue Silhouette */}
-      {/* - Text: WE'RE THE WORKERS' COMPENSATION SPECIALISTS THAT can help you */}
+      {/* 1. HERO SECTION (Full Window Width + Modern Glass Skyscraper */}
+      {/*    Aesthetic inspired by "Dedicated to higher standards" +   */}
+      {/*    Lady Justice silhouette in sleek subtle black/charcoal +  */}
+      {/*    Original tagline: "WE'RE THE WORKERS' COMPENSATION        */}
+      {/*    SPECIALISTS THAT can help you")                           */}
       {/* ======================================================== */}
-      <section id="hero" className="relative overflow-hidden bg-gradient-to-b from-[#F3F4F6] via-white to-white border-b border-zinc-200 scroll-mt-24">
-        {/* Subtle Marble Texture Background */}
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            backgroundImage: `radial-gradient(#94A3B8 1px, transparent 1px), radial-gradient(#CBD5E1 1px, transparent 1px)`,
-            backgroundSize: '24px 24px',
-            backgroundPosition: '0 0, 12px 12px'
-          }}
-        ></div>
+      <section
+        id="hero"
+        className="relative w-full min-h-[640px] sm:min-h-[700px] lg:min-h-[760px] flex items-center overflow-hidden bg-[#050D1A] text-white scroll-mt-24"
+      >
+        {/* Full-Width Background: Modern Glass Skyscraper Looking Up */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+            alt="Corporate skyscraper modern architectural glass facade"
+            className="w-full h-full object-cover object-center scale-105"
+          />
+          {/* Deep Cinematic Black & Navy Blue Gradient Vignette matching "Dedicated to higher standards" */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#030914] via-[#061224]/92 to-[#040C1A]/75"></div>
+          {/* Vertical subtle architectural darkening */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#030914] via-transparent to-[#030914]/80"></div>
+          {/* Subtle noise/grid architectural atmosphere */}
+          <div
+            className="absolute inset-0 opacity-15 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px)',
+              backgroundSize: '32px 32px'
+            }}
+          ></div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-8 sm:pt-14 pb-0 relative z-10">
-          {/* Main Hero Container */}
-          <div className="relative min-h-[460px] sm:min-h-[520px] rounded-t-3xl overflow-hidden flex flex-col justify-end">
-            {/* Lady Justice Silhouette in Sky Blue on the Right */}
-            <div className="absolute top-0 right-0 sm:right-6 lg:right-16 w-64 sm:w-80 lg:w-96 h-full flex items-center justify-center pointer-events-none z-10">
-              <svg
-                viewBox="0 0 300 450"
-                className="w-full h-full max-h-[440px] text-[#2D8CFF] opacity-90 drop-shadow-md"
-                fill="currentColor"
-              >
-                {/* Lady Justice Silhouette SVG Shape */}
-                <g>
-                  {/* Upraised Arm holding balance scales */}
-                  <path d="M 180 50 L 220 20 L 235 30 L 195 65 Z" />
-                  {/* Head with blindfold */}
-                  <circle cx="160" cy="70" r="22" />
-                  <path d="M 142 66 Q 160 62 178 66 L 178 74 Q 160 70 142 74 Z" fill="#FFFFFF" opacity="0.6" />
-                  {/* Torso & Robes */}
-                  <path d="M 140 92 C 145 130 130 180 120 230 C 110 280 100 340 90 440 L 220 440 C 215 350 205 280 195 210 C 185 160 180 120 175 92 Z" />
-                  {/* Left Arm holding sword */}
-                  <path d="M 140 105 L 105 135 L 110 150 L 140 125 Z" />
-                  <rect x="100" y="140" width="6" height="130" rx="3" fill="#2D8CFF" />
-                  {/* Scales of Justice Beam & Bowls */}
-                  <line x1="190" y1="20" x2="270" y2="40" stroke="currentColor" strokeWidth="4" />
-                  <line x1="195" y1="25" x2="190" y2="90" stroke="currentColor" strokeWidth="1.5" />
-                  <line x1="265" y1="42" x2="270" y2="105" stroke="currentColor" strokeWidth="1.5" />
-                  <path d="M 175 90 Q 190 105 205 90 Z" fill="currentColor" />
-                  <path d="M 255 105 Q 270 120 285 105 Z" fill="currentColor" />
-                </g>
-              </svg>
+        {/* Lady Justice Silhouette on Right: Styled in Sleek Subtle Black / Charcoal */}
+        <div className="absolute right-0 bottom-0 top-0 w-full sm:w-2/3 lg:w-1/2 pointer-events-none z-10 flex items-center justify-end pr-4 sm:pr-8 lg:pr-16 xl:pr-24 overflow-hidden">
+          {/* Subtle back-glow behind Lady Justice to give depth */}
+          <div className="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
+
+          <svg
+            viewBox="0 0 340 500"
+            className="w-auto h-[85%] max-h-[660px] opacity-95 drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
+            fill="none"
+          >
+            {/* Lady Justice in sleek subtle black/obsidian tones (#0D131C / #17202D) */}
+            <defs>
+              <linearGradient id="justiceBlackGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#1E2837" />
+                <stop offset="50%" stopColor="#0F1622" />
+                <stop offset="100%" stopColor="#080C14" />
+              </linearGradient>
+              <linearGradient id="swordSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#94A3B8" />
+                <stop offset="100%" stopColor="#334155" />
+              </linearGradient>
+              <linearGradient id="scalesGold" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#E2E8F0" />
+                <stop offset="50%" stopColor="#94A3B8" />
+                <stop offset="100%" stopColor="#475569" />
+              </linearGradient>
+            </defs>
+
+            <g>
+              {/* Upraised Right Arm holding Balance Scales */}
+              <path
+                d="M 195 90 L 250 45 L 265 58 L 215 105 Z"
+                fill="url(#justiceBlackGrad)"
+                stroke="#2A374A"
+                strokeWidth="1"
+              />
+              {/* Hand clasping the scales */}
+              <ellipse cx="258" cy="50" rx="9" ry="7" fill="url(#justiceBlackGrad)" />
+
+              {/* Head with Classical Hair & Blindfold */}
+              <circle cx="178" cy="100" r="24" fill="url(#justiceBlackGrad)" />
+              {/* Blindfold wrap */}
+              <path
+                d="M 158 95 Q 178 90 198 95 L 198 106 Q 178 101 158 106 Z"
+                fill="#E2E8F0"
+                opacity="0.85"
+              />
+
+              {/* Torso & Cascading Classical Robes in sleek obsidian black */}
+              <path
+                d="M 155 125 C 162 165 145 220 135 280 C 122 340 108 410 95 500 L 255 500 C 250 410 238 340 225 260 C 215 200 208 150 200 125 Z"
+                fill="url(#justiceBlackGrad)"
+                stroke="#1E2837"
+                strokeWidth="1.5"
+              />
+
+              {/* Robe pleats & flowing shadow lines */}
+              <path d="M 160 135 Q 175 220 165 310 Q 155 400 140 500" stroke="#253245" strokeWidth="2.5" />
+              <path d="M 180 135 Q 190 220 185 320 Q 180 410 175 500" stroke="#253245" strokeWidth="2" />
+              <path d="M 198 135 Q 208 240 210 330 Q 212 420 215 500" stroke="#253245" strokeWidth="2" />
+              <path d="M 148 200 Q 178 220 208 200" stroke="#253245" strokeWidth="2" />
+
+              {/* Left Arm holding the Sword of Justice */}
+              <path
+                d="M 155 138 L 115 175 L 122 192 L 155 160 Z"
+                fill="url(#justiceBlackGrad)"
+                stroke="#2A374A"
+                strokeWidth="1"
+              />
+              <circle cx="118" cy="182" r="8" fill="url(#justiceBlackGrad)" />
+
+              {/* Sword hilt & sharp steel blade */}
+              <rect x="105" y="180" width="28" height="4" rx="2" fill="url(#swordSteel)" />
+              <line x1="119" y1="170" x2="119" y2="180" stroke="url(#swordSteel)" strokeWidth="4" />
+              <polygon points="116,184 122,184 120,320 118,320" fill="url(#swordSteel)" />
+
+              {/* Scales of Justice Beam in refined metallic steel */}
+              <line x1="210" y1="42" x2="305" y2="65" stroke="url(#scalesGold)" strokeWidth="4" strokeLinecap="round" />
+              <circle cx="258" cy="53" r="5" fill="#E2E8F0" />
+
+              {/* Left Scale Pan & Strings */}
+              <line x1="216" y1="46" x2="208" y2="115" stroke="#94A3B8" strokeWidth="1.2" />
+              <line x1="226" y1="48" x2="232" y2="115" stroke="#94A3B8" strokeWidth="1.2" />
+              <path d="M 195 115 Q 220 135 245 115 Z" fill="url(#justiceBlackGrad)" stroke="#64748B" strokeWidth="1.5" />
+
+              {/* Right Scale Pan & Strings */}
+              <line x1="290" y1="64" x2="284" y2="135" stroke="#94A3B8" strokeWidth="1.2" />
+              <line x1="300" y1="66" x2="308" y2="135" stroke="#94A3B8" strokeWidth="1.2" />
+              <path d="M 272 135 Q 296 155 320 135 Z" fill="url(#justiceBlackGrad)" stroke="#64748B" strokeWidth="1.5" />
+            </g>
+          </svg>
+        </div>
+
+        {/* Full-Width Content Container */}
+        <div className="w-full relative z-20 px-6 sm:px-12 lg:px-20 xl:px-28 py-16 sm:py-24 lg:py-32">
+          <div className="max-w-3xl space-y-6">
+            {/* Kicker badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-widest text-blue-200">
+              <span className="w-2 h-2 rounded-full bg-[#2ECC71] animate-pulse"></span>
+              <span>Representing California Injured Workers Since 1976</span>
             </div>
 
-            {/* Deep Blue Wave Cut Banner on Bottom (Image 2) */}
-            <div className="bg-[#0E336B] text-white p-8 sm:p-14 lg:p-16 rounded-3xl relative z-20 shadow-2xl mt-12 sm:mt-24">
-              <div className="max-w-2xl space-y-4">
-                <span className="text-xs font-bold uppercase tracking-widest text-blue-200 block">
-                  Representing California's Injured Workers Since 1976
+            {/* Tagline Heading from Image 2 */}
+            <div className="space-y-1">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight uppercase leading-[1.04] font-display drop-shadow-lg">
+                We're The <br />
+                Workers' <br />
+                Compensation <br />
+                Specialists That
+              </h1>
+
+              {/* Cursive script "can help you" with Green Underline */}
+              <div className="pt-2">
+                <span className="text-4xl sm:text-6xl lg:text-7xl text-blue-100 font-serif italic tracking-wide lowercase inline-block relative pr-6">
+                  can help you
+                  <span className="block w-full h-1.5 bg-[#2ECC71] mt-1.5 rounded-full shadow-[0_0_12px_rgba(46,204,113,0.8)]"></span>
                 </span>
+              </div>
+            </div>
 
-                {/* Big White Bold Headline matching Image 2 */}
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-[1.08] font-display">
-                  We're The <br />
-                  Workers' <br />
-                  Compensation <br />
-                  Specialists That
-                </h1>
+            {/* Description Text */}
+            <p className="text-base sm:text-lg text-zinc-300 pt-3 max-w-2xl leading-relaxed font-normal">
+              When our team is focused on your recovery and rights, you will find our dedication to your case exceeds that of any other law firm you've worked with in the past. If you've been injured on the job in Los Angeles, Riverside, or San Bernardino County, we are here for you.
+            </p>
 
-                {/* Script Font "can help you" with Green Underline */}
-                <div className="pt-1">
-                  <span className="text-3xl sm:text-5xl text-blue-100 font-serif italic tracking-wide lowercase inline-block relative pr-4">
-                    can help you
-                    <span className="block w-full h-1 bg-[#2ECC71] mt-1 rounded-full"></span>
-                  </span>
-                </div>
+            {/* Action CTA Buttons */}
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <button
+                onClick={onOpenQuote}
+                className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded shadow-2xl transition-all duration-200 active:scale-95 flex items-center gap-2 border border-blue-400/40"
+              >
+                <span>Request Free Case Consultation</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
 
-                <p className="text-sm sm:text-base text-blue-100 pt-3 max-w-lg leading-relaxed">
-                  Have you been injured on the job in Los Angeles, Riverside, or San Bernardino County? Get aggressive, compassionate legal representation with no upfront fees.
-                </p>
+              <a
+                href="tel:3104730777"
+                className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded backdrop-blur-md transition-all"
+              >
+                <Phone className="w-4 h-4 text-[#2ECC71]" />
+                <span>Call: 310-473-0777</span>
+              </a>
+            </div>
 
-                {/* Action CTA Buttons */}
-                <div className="pt-4 flex flex-wrap items-center gap-4">
-                  <button
-                    onClick={onOpenQuote}
-                    className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white font-extrabold text-xs uppercase tracking-wider px-8 py-4 rounded-md shadow-xl transition-all duration-200 active:scale-95 flex items-center gap-2"
-                  >
-                    <span>Request Free Case Consultation</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <a
-                    href="tel:3104730777"
-                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-md transition-all"
-                  >
-                    <Phone className="w-4 h-4 text-[#2ECC71]" />
-                    <span>Call: 310-473-0777</span>
-                  </a>
-                </div>
+            {/* Trust Points Row */}
+            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 sm:gap-8 text-xs font-semibold text-zinc-400">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                <span className="text-zinc-200">No Recovery, No Fee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                <span className="text-zinc-200">Rated by Super Lawyers 10 Years</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                <span className="text-zinc-200">Se Habla Español</span>
               </div>
             </div>
           </div>
