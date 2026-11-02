@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
+import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
 import { QuoteModal } from './components/ui/QuoteModal';
 
@@ -31,21 +32,8 @@ export function App() {
           </Routes>
         </main>
 
-        {/* Legal Copyright Footer Bar */}
-        <footer className="bg-[#09234B] text-zinc-300 py-6 border-t border-blue-950 text-xs">
-          <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-            <p className="text-zinc-400">
-              &copy; {new Date().getFullYear()} Mallery &amp; Stern. Work Injury Attorneys. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4 text-zinc-400">
-              <span>Representing California Workers Since 1976</span>
-              <span>•</span>
-              <a href="tel:3104730777" className="hover:text-white transition-colors">
-                310-473-0777
-              </a>
-            </div>
-          </div>
-        </footer>
+        {/* Comprehensive Professional Law Firm Footer */}
+        <Footer onOpenQuote={() => setIsConsultationOpen(true)} />
 
         {/* Universal Free Consultation Modal */}
         <QuoteModal
