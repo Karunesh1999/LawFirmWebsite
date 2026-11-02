@@ -90,13 +90,13 @@ export const MallerySternLogo: React.FC<LogoProps> = ({
       {/* Wordmark: Mallery & Stern / WORK INJURY ATTORNEYS */}
       <div className="flex flex-col justify-center">
         <span
-          className="font-extrabold tracking-tight text-xl sm:text-2xl leading-none font-display"
+          className="font-extrabold tracking-tight text-lg sm:text-xl md:text-2xl leading-none font-display truncate"
           style={{ color: primaryColor }}
         >
           Mallery &amp; Stern
         </span>
         <span
-          className="text-[10px] sm:text-[11px] font-bold tracking-[0.24em] uppercase mt-1 leading-none"
+          className="text-[8px] xs:text-[9px] sm:text-[10px] md:text-[11px] font-bold tracking-[0.16em] sm:tracking-[0.24em] uppercase mt-1 leading-none"
           style={{ color: subColor }}
         >
           Work Injury Attorneys

@@ -102,39 +102,48 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           {/* Logo on Left */}
           <button
             onClick={() => scrollTo('hero')}
-            className="group focus:outline-none flex-shrink-0 text-left"
+            className="group focus:outline-none flex-shrink-0 text-left max-w-[65%] sm:max-w-none"
             aria-label="Mallery & Stern Work Injury Attorneys Home"
           >
             <MallerySternLogo isDark={false} />
           </button>
 
           {/* Right Consultation Callout */}
-          <div className="flex items-center gap-4">
-            <div className="text-right hidden sm:block">
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+            <div className="text-right hidden md:block">
               <span className="block text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#1F2937]">
                 Contact Us For A Free Consultation
               </span>
               <a
                 href="tel:3104730777"
-                className="flex items-center justify-end gap-2 text-xl sm:text-2xl font-black text-[#0E336B] hover:text-[#1D4ED8] transition-colors tracking-tight font-display"
+                className="flex items-center justify-end gap-1.5 sm:gap-2 text-lg sm:text-2xl font-black text-[#0E336B] hover:text-[#1D4ED8] transition-colors tracking-tight font-display"
               >
-                <Phone className="w-5 h-5 text-[#0E336B] fill-current" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#0E336B] fill-current" />
                 <span>310-473-0777</span>
               </a>
             </div>
 
+            {/* Direct Call Icon for small screens */}
+            <a
+              href="tel:3104730777"
+              className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg bg-blue-50 text-[#0E336B] hover:bg-blue-100 transition-colors"
+              aria-label="Call Mallery & Stern"
+            >
+              <Phone className="w-4 h-4 text-[#0E336B] fill-current" />
+            </a>
+
             {/* Mobile Quote Button */}
             <button
               onClick={onOpenQuote}
-              className="sm:hidden bg-[#0E336B] text-white font-bold text-xs px-3 py-1.5 rounded uppercase"
+              className="sm:hidden bg-[#0E336B] text-white font-bold text-[11px] px-2.5 py-1.5 rounded uppercase"
             >
-              Consultation
+              Consult
             </button>
 
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-zinc-700 hover:text-black hover:bg-zinc-100"
+              className="xl:hidden p-2 rounded-lg text-zinc-700 hover:text-black hover:bg-zinc-100"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -149,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       <nav className="w-full bg-[#0E336B] text-white">
         <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 flex items-center justify-between">
           {/* Desktop Nav Items (Exact 9 items from Image 1) */}
-          <div className="hidden lg:flex items-center gap-1 xl:gap-2 py-1 text-xs font-bold uppercase tracking-wider">
+          <div className="hidden xl:flex items-center gap-1 xl:gap-2 py-1 text-xs font-bold uppercase tracking-wider">
             {/* 1. HOME */}
             <button
               onClick={() => scrollTo('hero')}
@@ -335,7 +344,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
           </div>
 
           {/* Consultation Button on Far Right of Navy Bar */}
-          <div className="hidden lg:flex items-center py-1.5">
+          <div className="hidden xl:flex items-center py-1.5">
             <button
               onClick={onOpenQuote}
               className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded transition-all shadow"
@@ -348,7 +357,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0E336B] text-white border-b border-blue-950 p-4 space-y-1">
+        <div className="xl:hidden bg-[#0E336B] text-white border-b border-blue-950 p-4 space-y-1">
           <button
             onClick={() => scrollTo('hero')}
             className="w-full flex items-center justify-between p-2.5 rounded hover:bg-[#123E80] text-sm font-bold uppercase text-left"

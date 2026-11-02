@@ -30,25 +30,25 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
         className="relative w-full overflow-hidden bg-[#F8F9FA] scroll-mt-24 border-b border-zinc-200"
       >
         {/* Full Window Width Container (edge-to-edge) */}
-        <div className="relative w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] xl:min-h-[780px] flex items-center overflow-hidden">
+        <div className="relative w-full min-h-[520px] sm:min-h-[600px] md:min-h-[660px] lg:min-h-[720px] xl:min-h-[780px] flex items-center overflow-hidden">
 
           {/* Exact User-Uploaded Image as Full-Width Background */}
           <div className="absolute inset-0 z-0">
             <img
               src="/hero_banner.jpg"
               alt="Mallery & Stern - Work Injury Attorneys Hero"
-              className="w-full h-full object-cover object-right sm:object-center select-none pointer-events-none"
+              className="w-full h-full object-cover object-[78%_center] sm:object-[70%_center] md:object-center select-none pointer-events-none"
             />
             {/* Subtle soft gradient on left for ultra-clean text legibility on small screens */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent sm:via-white/40 lg:to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/20 sm:from-white/90 sm:via-white/60 sm:to-transparent lg:to-transparent pointer-events-none"></div>
           </div>
 
           {/* Full-Width Content Layer (Tagline, Heading, Cursive & CTAs) */}
-          <div className="w-full relative z-10 px-6 sm:px-12 lg:px-20 xl:px-28 py-16 sm:py-24 lg:py-28 flex items-center">
-            <div className="max-w-2xl xl:max-w-3xl space-y-5">
+          <div className="w-full relative z-10 px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 py-12 sm:py-20 lg:py-28 flex items-center">
+            <div className="w-full max-w-xl md:max-w-2xl xl:max-w-3xl space-y-4 sm:space-y-5">
 
               {/* Exact Tagline Heading from Reference Image */}
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-[#0E336B] tracking-tight uppercase leading-[1.04] font-display drop-shadow-sm">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-[#0E336B] tracking-tight uppercase leading-[1.08] sm:leading-[1.04] font-display drop-shadow-sm">
                 We're The <br />
                 Workers' <br />
                 Compensation <br />
@@ -57,7 +57,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
 
               {/* Cursive script "can help you" with Green Underline */}
               <div className="pt-1">
-                <span className="text-4xl sm:text-6xl lg:text-7xl text-[#1E3A8A] font-serif italic tracking-wide lowercase inline-block relative pr-6">
+                <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1E3A8A] font-serif italic tracking-wide lowercase inline-block relative pr-6">
                   can help you
                   <span className="block w-full h-1.5 bg-[#2ECC71] mt-1.5 rounded-full shadow-[0_0_10px_rgba(46,204,113,0.7)]"></span>
                 </span>
@@ -69,7 +69,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
               </p>
 
               {/* Action CTA Buttons */}
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <button
                   onClick={onOpenQuote}
                   className="bg-[#0E336B] hover:bg-[#123E80] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md shadow-xl transition-all duration-200 active:scale-95 flex items-center gap-2"
