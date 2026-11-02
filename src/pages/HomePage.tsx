@@ -68,40 +68,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                 Have you been injured on the job in Los Angeles, Riverside, or San Bernardino County? Get aggressive, compassionate legal representation with no upfront fees.
               </p>
 
-              {/* Action CTA Buttons */}
-              <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                <button
-                  onClick={onOpenQuote}
-                  className="bg-[#0E336B] hover:bg-[#123E80] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md shadow-xl transition-all duration-200 active:scale-95 flex items-center gap-2"
-                >
-                  <span>Request Free Case Consultation</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
 
-                <a
-                  href="tel:3104730777"
-                  className="inline-flex items-center gap-2.5 bg-white/95 hover:bg-white border-2 border-[#0E336B] text-[#0E336B] font-extrabold text-xs sm:text-sm uppercase tracking-wider px-6 py-4 rounded-md shadow-md transition-all"
-                >
-                  <Phone className="w-4 h-4 text-[#2ECC71]" />
-                  <span>Call: 310-473-0777</span>
-                </a>
-              </div>
 
-              {/* Credibility Guarantee Row */}
-              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-bold text-[#0E336B]">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
-                  <span>No Recovery, No Fee</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
-                  <span>Rated by Super Lawyers 10 Years</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
-                  <span>Se Habla Español</span>
-                </div>
-              </div>
+
 
             </div>
           </div>
@@ -201,26 +170,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-300 bg-zinc-900 group">
                 <img
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1470&auto=format&fit=crop"
-                  alt="Law library and scales of justice"
-                  className="w-full h-[400px] object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
+                  src="/about_mallery_stern.jpg"
+                  alt="Mallery & Stern - Lady Justice, Law Library and World Globe"
+                  className="w-full h-auto aspect-square object-contain block group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/90 via-[#0E336B]/40 to-transparent"></div>
-
-                {/* Overlay Box with [M || S] and MALLERY & STERN */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white space-y-4">
-                  <div className="w-16 h-16 border-2 border-white p-1 rounded">
-                    <div className="w-full h-full border border-blue-200 flex items-center justify-center text-xl font-bold tracking-wider">
-                      M || S
-                    </div>
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-widest font-display text-white">
-                    Mallery &amp; Stern
-                  </h3>
-                  <span className="text-xs uppercase tracking-[0.25em] text-blue-200 font-semibold">
-                    Work Injury Attorneys
-                  </span>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/20 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
           </div>
