@@ -268,23 +268,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
               </ul>
 
               {/* Super Lawyers Badge matching Image 5 */}
-              <div className="pt-4">
+              {/* <div className="pt-4">
                 <div className="inline-block border-2 border-zinc-300 rounded-xl bg-white p-4 shadow-md max-w-xs">
                   <span className="text-[10px] uppercase font-bold text-zinc-400 block tracking-wider">
                     Rated By
                   </span>
                   <div className="text-xl font-black text-[#111827] tracking-tight font-serif mt-0.5">
                     Super Lawyers
-                  </div>
-                  {/* Orange Ribbon with Lawrence I. Stern & 10 YEARS */}
-                  <div className="mt-2 bg-[#FF5500] text-white px-3 py-1.5 rounded text-xs font-black uppercase tracking-wide text-center">
+                  </div> */}
+              {/* Orange Ribbon with Lawrence I. Stern & 10 YEARS */}
+              {/* <div className="mt-2 bg-[#FF5500] text-white px-3 py-1.5 rounded text-xs font-black uppercase tracking-wide text-center">
                     Lawrence I. Stern
                   </div>
                   <div className="text-center text-[10px] font-extrabold uppercase tracking-widest text-[#FF5500] mt-1.5">
                     10 Years
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Consultation Quick Trigger */}
               <div className="pt-4">
