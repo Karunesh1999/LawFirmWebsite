@@ -34,63 +34,78 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuote }) => {
   return (
     <div className="w-full bg-white text-[#1F2937]">
       {/* ======================================================== */}
-      {/* 1. HERO SECTION (With generated Scale of Justice background) */}
+      {/* 1. HERO SECTION (Light & Bright, Exact Alignment with HomePage) */}
       {/* ======================================================== */}
-      <section className="relative w-full py-20 lg:py-28 overflow-hidden bg-[#0A1A33] text-white">
-        {/* Scale of Justice Background Image with rich overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/scale_of_justice.jpg"
-            alt="Scales of Justice and Law Library"
-            className="w-full h-full object-cover opacity-25 object-center select-none pointer-events-none"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07162C] via-[#0A1A33]/90 to-transparent"></div>
-        </div>
+      <section
+        id="about-hero"
+        className="relative w-full overflow-hidden bg-[#F8F9FA] scroll-mt-24 border-b border-zinc-200"
+      >
+        {/* Full Window Width Container (edge-to-edge matching HomePage) */}
+        <div className="relative w-full min-h-[520px] sm:min-h-[600px] md:min-h-[660px] lg:min-h-[720px] xl:min-h-[780px] flex items-center overflow-hidden">
 
-        <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2D8CFF] block">
-              About Mallery &amp; Stern • California Injured Workers Law Firm
-            </span>
+          {/* Scales of Justice Image as Light Background matching HomePage aesthetic */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/about_hero_banner.jpg"
+              alt="Mallery & Stern - Scales of Justice and Law Library"
+              className="w-full h-full object-cover object-[75%_center] sm:object-[70%_center] md:object-center select-none pointer-events-none"
+            />
+            {/* Soft, crisp white gradient overlay on left for clean readable text matching HomePage */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:from-white/90 sm:via-white/50 sm:to-transparent lg:to-transparent pointer-events-none"></div>
+          </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight uppercase font-display">
-              We Represent <br />
-              <span className="text-[#2D8CFF]">People Injured</span> <br />
-              On The Job
-            </h1>
+          {/* Full-Width Content Layer (Exact Alignment to HomePage px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32) */}
+          <div className="w-full relative z-10 px-4 sm:px-8 lg:px-16 xl:px-24 2xl:px-32 py-12 sm:py-20 lg:py-28 flex items-center">
+            <div className="w-full max-w-xl md:max-w-2xl xl:max-w-3xl space-y-4 sm:space-y-5">
 
-            <div className="w-16 h-1 bg-[#2D8CFF]"></div>
 
-            <p className="text-base sm:text-lg text-blue-100/90 leading-relaxed font-normal">
-              We represent people injured physically and psychologically from work as well as caused by accidents related to work. Mallery &amp; Stern provides a vigorous and ethical representation of our clients in a manner designed to get you the results you are entitled to.
-            </p>
+              {/* Exact Tagline & Heading Style matching HomePage */}
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-[#0E336B] tracking-tight uppercase leading-[1.08] sm:leading-[1.04] font-display drop-shadow-sm">
+                We Represent <br />
+                <span className="text-[#2D8CFF]">People Injured</span> <br />
+                On The Job
+              </h1>
 
-            <div className="p-4 sm:p-5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white space-y-2">
-              <p className="text-sm sm:text-base font-bold italic text-white flex items-center gap-2">
-                <Scale className="w-5 h-5 text-[#2D8CFF] flex-shrink-0" />
-                <span>Injured? Weigh your choice of a lawyer carefully.</span>
+              {/* Accent Line matching HomePage */}
+              <div className="w-16 h-1 bg-[#2D8CFF] rounded-full"></div>
+
+              {/* Main Lead Paragraph */}
+              <p className="text-sm sm:text-base text-zinc-800 pt-1 leading-relaxed font-medium">
+                We represent people injured physically and psychologically from work as well as caused by accidents related to work. Mallery &amp; Stern provides a vigorous and ethical representation of our clients in a manner designed to get you the results you are entitled to.
               </p>
-              <p className="text-xs text-blue-200 leading-relaxed">
-                We represent injured individuals in Workers' Compensation matters, personal injury, and discrimination based upon race, sex, gender, wage, and hour issues. If you were injured at work from overwork, bending, lifting, or carrying or harassment, we may be able to help you get the medical care you need and the benefits you are entitled to.
-              </p>
-            </div>
 
-            <div className="pt-2 flex flex-wrap items-center gap-4">
-              <button
-                onClick={onOpenQuote}
-                className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white font-extrabold text-xs uppercase tracking-wider px-8 py-4 rounded-md shadow-xl transition-all"
-              >
-                Request Free Consultation
-              </button>
-              <a
-                href="tel:3104730777"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-md transition-all"
-              >
-                <Phone className="w-4 h-4 text-[#2D8CFF]" />
-                <span>Call 310-473-0777</span>
-              </a>
+              {/* Prominent Highlight Callout Box */}
+              <div className="p-4 sm:p-5 rounded-xl bg-white/90 border border-zinc-200/90 shadow-sm space-y-2">
+                <p className="text-sm sm:text-base font-bold italic text-[#0E336B] flex items-center gap-2">
+                  <Scale className="w-5 h-5 text-[#2D8CFF] flex-shrink-0" />
+                  <span>Injured? Weigh your choice of a lawyer carefully.</span>
+                </p>
+                <p className="text-xs text-zinc-600 leading-relaxed font-normal">
+                  We represent injured individuals in Workers' Compensation matters, personal injury, and discrimination based upon race, sex, gender, wage, and hour issues. If you were injured at work from overwork, bending, lifting, carrying, or harassment, we may be able to help you get the medical care you need and the benefits you are entitled to.
+                </p>
+              </div>
+
+              {/* CTA Action Buttons matching HomePage exactly */}
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                <button
+                  onClick={onOpenQuote}
+                  className="bg-[#0E336B] hover:bg-[#123E80] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md shadow-xl transition-all duration-200 active:scale-95 flex items-center justify-center gap-2"
+                >
+                  <span>Request Free Consultation</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <a
+                  href="tel:3104730777"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white/95 hover:bg-white border-2 border-[#0E336B] text-[#0E336B] font-extrabold text-xs sm:text-sm uppercase tracking-wider px-6 py-4 rounded-md shadow-md transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[#2D8CFF]" />
+                  <span>Call: 310-473-0777</span>
+                </a>
+              </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
