@@ -7,30 +7,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        mscc: {
-          black: '#050505',
-          dark: '#141414',
-          surface: '#252525',
-          concrete: '#777777',
-          light: '#F5F5F3',
-          border: '#E5E5E2',
-          accent: '#B66B43', // Concrete terracotta accent
-          accentHover: '#9F5833',
+        legal: {
+          navy: '#0E336B',
+          dark: '#071D3F',
+          blue: '#2D8CFF',
+          accent: '#1C7CEE',
+          surface: '#F9FAFB',
+          border: '#E5E7EB',
         }
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        display: ['"Montserrat"', 'sans-serif'],
+        heading: ['"Montserrat"', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-0.04em',
         tighter: '-0.02em',
+        tight: '-0.01em',
+        wide: '0.05em',
         widest: '0.15em',
-        architectural: '0.2em',
       }
     },
   },
   plugins: [],
 }
-
