@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Phone,
   Scale,
@@ -8,7 +8,8 @@ import {
   ArrowRight,
   FileText,
   Star,
-  Briefcase
+  Briefcase,
+  ChevronDown
 } from 'lucide-react';
 
 interface HomePageProps {
@@ -16,6 +17,11 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(prev => prev === index ? null : index);
+  };
   return (
     <div className="w-full bg-[#FFFFFF] text-[#1F2937]">
       {/* ======================================================== */}
@@ -374,7 +380,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             </h2>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-4">
+          <div className="max-w-4xl mx-auto space-y-4">
             {[
               {
                 q: 'What should I do immediately after getting injured at work?',
@@ -392,16 +398,37 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                 q: 'What benefits am I entitled to receive under California law?',
                 a: 'Benefits include 100% covered medical care, temporary disability wage replacement, permanent disability compensation, and supplemental job displacement vouchers if you cannot return to your prior role.'
               }
-            ].map((faq, i) => (
-              <div key={i} className="bg-[#F9FAFB] border border-zinc-200 rounded-xl p-5 space-y-2">
-                <h3 className="font-bold text-base text-[#0E336B]">
-                  {faq.q}
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
+            ].map((faq, i) => {
+              const isOpen = openFaqIndex === i;
+              return (
+                <div
+                  key={i}
+                  className="bg-[#F9FAFB] border border-zinc-200 rounded-xl overflow-hidden transition-all duration-200 hover:border-[#2D8CFF]"
+                >
+                  <button
+                    onClick={() => toggleFaq(i)}
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <h3 className="font-bold text-base text-[#0E336B] leading-snug">
+                      {faq.q}
+                    </h3>
+                    <div
+                      className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-blue-50 text-[#0E336B] transition-transform duration-300 ${
+                        isOpen ? 'rotate-180 bg-[#0E336B] text-white' : ''
+                      }`}
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 pb-5 pt-1 border-t border-zinc-100 text-xs sm:text-sm text-zinc-600 leading-relaxed transition-all duration-200">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
