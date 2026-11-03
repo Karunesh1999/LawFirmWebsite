@@ -581,8 +581,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* ======================================================== */}
       {/* 9. CLIENT TESTIMONIALS (Exact Match to Image 1 Nav item) */}
       {/* ======================================================== */}
-      <section id="testimonials" className="py-20 bg-white text-[#1F2937] border-t border-zinc-200 scroll-mt-24">
-        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 space-y-12">
+      <section id="testimonials" className="py-24 bg-white text-[#1F2937] border-t border-zinc-200 scroll-mt-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 space-y-12">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#2D8CFF]">
               Verified Client Outcomes
@@ -592,7 +592,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {[
               {
                 quote: "Mallery & Stern fought for me when the insurance company denied my back surgery. Thanks to Lawrence Stern and the team, I got the treatment I needed and a substantial financial settlement.",
@@ -613,16 +613,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                 type: "Construction Fall Settlement"
               }
             ].map((t, i) => (
-              <div key={i} className="bg-white border border-zinc-200 rounded-xl p-6 space-y-4 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex text-amber-500">
-                  {[...Array(5)].map((_, s) => (
-                    <Star key={s} className="w-4 h-4 fill-current" />
-                  ))}
+              <div
+                key={i}
+                className="bg-white border border-zinc-200 rounded-xl p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.03] hover:border-[#2D8CFF] min-h-[300px] cursor-pointer"
+              >
+                <div className="space-y-4">
+                  <div className="flex text-amber-500">
+                    {[...Array(5)].map((_, s) => (
+                      <Star key={s} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-zinc-600 italic leading-relaxed">
+                    "{t.quote}"
+                  </p>
                 </div>
-                <p className="text-xs text-zinc-600 italic leading-relaxed">
-                  "{t.quote}"
-                </p>
-                <div className="pt-2 border-t border-zinc-100">
+                <div className="pt-4 border-t border-zinc-100 mt-6">
                   <h4 className="font-bold text-sm text-[#0E336B]">{t.author}</h4>
                   <p className="text-[11px] text-zinc-500">{t.location} • {t.type}</p>
                 </div>
