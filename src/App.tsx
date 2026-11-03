@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { HomePage } from './pages/HomePage';
+import { AboutPage } from './pages/AboutPage';
 import { QuoteModal } from './components/ui/QuoteModal';
 
 // Auto scroll to top on page navigation
@@ -28,6 +29,8 @@ export function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage onOpenQuote={() => setIsConsultationOpen(true)} />} />
+            <Route path="/about" element={<AboutPage onOpenQuote={() => setIsConsultationOpen(true)} />} />
+            <Route path="/about-us" element={<AboutPage onOpenQuote={() => setIsConsultationOpen(true)} />} />
             <Route path="*" element={<HomePage onOpenQuote={() => setIsConsultationOpen(true)} />} />
           </Routes>
         </main>

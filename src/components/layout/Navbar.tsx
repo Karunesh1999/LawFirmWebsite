@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Phone,
   Menu,
@@ -35,19 +36,36 @@ const YoutubeIcon = ({ className = "w-4 h-4 text-red-500" }: { className?: strin
 );
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [socialDropdownOpen, setSocialDropdownOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
-  const aboutRef = useRef<HTMLDivElement>(null);
   const socialRef = useRef<HTMLDivElement>(null);
 
-  // Smooth scroll handler to elements on the single page
+  // Smooth scroll handler to elements or navigate to page
   const scrollTo = (elementId: string) => {
     setMobileMenuOpen(false);
-    setAboutDropdownOpen(false);
     setSocialDropdownOpen(false);
+
+    if (elementId === 'about') {
+      navigate('/about');
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById(elementId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
 
     const el = document.getElementById(elementId);
     if (el) {
@@ -81,9 +99,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (aboutRef.current && !aboutRef.current.contains(event.target as Node)) {
-        setAboutDropdownOpen(false);
-      }
       if (socialRef.current && !socialRef.current.contains(event.target as Node)) {
         setSocialDropdownOpen(false);
       }
@@ -169,49 +184,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
               HOME
             </button>
 
-            {/* 2. ABOUT US ⌵ */}
-            <div
-              ref={aboutRef}
-              className="relative"
-              onMouseEnter={() => setAboutDropdownOpen(true)}
-              onMouseLeave={() => setAboutDropdownOpen(false)}
+            {/* 2. ABOUT US */}
+            <button
+              onClick={() => scrollTo('about')}
+              className={`px-3 py-2 rounded transition-colors ${
+                location.pathname === '/about' || activeSection === 'about'
+                  ? 'bg-[#09234B] text-white'
+                  : 'hover:bg-[#123E80] text-zinc-100'
+              }`}
             >
-              <button
-                onClick={() => scrollTo('about')}
-                className={`inline-flex items-center gap-1 px-3 py-2 rounded transition-colors ${
-                  activeSection === 'about' ? 'bg-[#09234B] text-white' : 'hover:bg-[#123E80] text-zinc-100'
-                }`}
-              >
-                <span>ABOUT US</span>
-                <ChevronDown className="w-3.5 h-3.5 text-blue-200" />
-              </button>
-
-              {aboutDropdownOpen && (
-                <div className="absolute top-full left-0 mt-0.5 w-64 bg-white border border-zinc-200 shadow-xl py-2 z-50 rounded-b-lg">
-                  <button
-                    onClick={() => scrollTo('about')}
-                    className="w-full text-left block px-4 py-2.5 text-xs text-[#0E336B] hover:bg-zinc-50 hover:text-[#2D8CFF] transition-colors"
-                  >
-                    <span className="block font-bold">ATTORNEYS</span>
-                    <span className="text-[10px] text-zinc-500">About Mallery &amp; Stern</span>
-                  </button>
-                  <button
-                    onClick={() => scrollTo('about')}
-                    className="w-full text-left block px-4 py-2.5 text-xs text-[#0E336B] hover:bg-zinc-50 hover:text-[#2D8CFF] transition-colors"
-                  >
-                    <span className="block font-bold">OUR TEAM</span>
-                    <span className="text-[10px] text-zinc-500">Our Heritage Since 1976</span>
-                  </button>
-                  <button
-                    onClick={() => scrollTo('contact')}
-                    className="w-full text-left block px-4 py-2.5 text-xs text-[#0E336B] hover:bg-zinc-50 hover:text-[#2D8CFF] transition-colors"
-                  >
-                    <span className="block font-bold">LOCATIONS</span>
-                    <span className="text-[10px] text-zinc-500">Los Angeles &amp; Rancho Cucamonga</span>
-                  </button>
-                </div>
-              )}
-            </div>
+              ABOUT US
+            </button>
 
             {/* 3. OUR SERVICES */}
             <button
