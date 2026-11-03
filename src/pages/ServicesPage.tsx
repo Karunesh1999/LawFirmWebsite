@@ -4,10 +4,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
-  Briefcase,
-  Users,
-  DollarSign,
-  AlertTriangle,
   Scale
 } from 'lucide-react';
 
@@ -201,33 +197,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuote }) => {
               </div>
             </div>
 
-            {/* Right Visual Card */}
+            {/* Right Visual Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-lg bg-[#F9FAFB] border border-zinc-200 rounded-2xl p-8 space-y-6 shadow-md">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0E336B] flex items-center justify-center">
-                  <Briefcase className="w-8 h-8 text-[#2D8CFF]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0E336B]">
-                  Types of Workplace Injuries Handled:
-                </h3>
-                <ul className="space-y-3 text-xs sm:text-sm text-zinc-700">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2D8CFF] mt-2 flex-shrink-0"></span>
-                    <span><strong>Spinal &amp; Disc Injuries:</strong> Lumbar herniations, cervical strain from heavy lifting or machinery.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2D8CFF] mt-2 flex-shrink-0"></span>
-                    <span><strong>Cumulative Stress &amp; Trauma:</strong> Carpal tunnel, rotator cuff tears, repetitive joint breakdown.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2D8CFF] mt-2 flex-shrink-0"></span>
-                    <span><strong>Construction Site Falls:</strong> Scaffolding collapses, heavy equipment trauma, ladder injuries.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2D8CFF] mt-2 flex-shrink-0"></span>
-                    <span><strong>Psychological &amp; Stress Claims:</strong> Severe stress, anxiety, or trauma caused by abusive working conditions.</span>
-                  </li>
-                </ul>
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-zinc-900 group">
+                <img
+                  src="/workers_comp_service.jpg"
+                  alt="California Workers' Compensation Representation - Mallery & Stern"
+                  className="w-full h-auto aspect-square object-cover block group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/40 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
@@ -242,23 +220,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuote }) => {
         <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-            {/* Left Visual Card */}
+            {/* Left Visual Image */}
             <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
-              <div className="w-full max-w-lg bg-white border border-zinc-200 rounded-2xl p-8 space-y-6 shadow-md">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0E336B] flex items-center justify-center">
-                  <Users className="w-8 h-8 text-[#2D8CFF]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0E336B]">
-                  California Labor Code 132a Protections
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                  California law strictly prohibits employers from firing, demoting, or punishing an employee for reporting an on-the-job injury or filing a Workers' Compensation claim.
-                </p>
-                <div className="p-4 rounded-xl bg-blue-50/70 border border-blue-200/60 text-xs text-[#0E336B] font-semibold space-y-1">
-                  <p>✓ Reinstatement to your position</p>
-                  <p>✓ Reimbursement for lost wages and work benefits</p>
-                  <p>✓ Statutory penalty increases against the employer</p>
-                </div>
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-zinc-900 group">
+                <img
+                  src="/employment_issues_service.jpg"
+                  alt="California Employment Law & Workplace Protection - Mallery & Stern"
+                  className="w-full h-auto aspect-square object-cover block group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/40 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
@@ -363,25 +333,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuote }) => {
               </div>
             </div>
 
-            {/* Right Visual Card */}
+            {/* Right Visual Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-lg bg-[#F9FAFB] border border-zinc-200 rounded-2xl p-8 space-y-6 shadow-md">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0E336B] flex items-center justify-center">
-                  <DollarSign className="w-8 h-8 text-[#2D8CFF]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0E336B]">
-                  Common Wage Violations:
-                </h3>
-                <div className="space-y-4 text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                  <div className="p-3 bg-white border border-zinc-200 rounded-lg">
-                    <strong className="text-zinc-900 block">Meal Break Penalties</strong>
-                    Employers must pay one additional hour of regular pay for each workday a compliant meal or rest break is denied.
-                  </div>
-                  <div className="p-3 bg-white border border-zinc-200 rounded-lg">
-                    <strong className="text-zinc-900 block">Off-The-Clock Tasks</strong>
-                    Security checks, putting on safety gear, or closing shop after clocking out must all be fully compensated.
-                  </div>
-                </div>
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-zinc-900 group">
+                <img
+                  src="/wage_hour_service.jpg"
+                  alt="California Wage and Hour Dispute Advocacy - Mallery & Stern"
+                  className="w-full h-auto aspect-square object-cover block group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/40 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
@@ -396,23 +356,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuote }) => {
         <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-            {/* Left Visual Card */}
+            {/* Left Visual Image */}
             <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
-              <div className="w-full max-w-lg bg-white border border-zinc-200 rounded-2xl p-8 space-y-6 shadow-md">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0E336B] flex items-center justify-center">
-                  <AlertTriangle className="w-8 h-8 text-[#2D8CFF]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0E336B]">
-                  Medical &amp; Industrial Malpractice
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                  When company-assigned medical clinics, occupational physicians, or professionals fail to adhere to standards of care, injured individuals can suffer permanent disability or worsened conditions.
-                </p>
-                <div className="p-4 rounded-xl bg-zinc-50 border border-zinc-200 text-xs text-zinc-700 space-y-1">
-                  <p>• Surgical errors in workers' comp authorized clinics</p>
-                  <p>• Delayed diagnosis of catastrophic conditions</p>
-                  <p>• Dangerous drug interactions / medical mismanagement</p>
-                </div>
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-zinc-900 group">
+                <img
+                  src="/professional_malpractice_service.jpg"
+                  alt="Professional Liability and Medical Malpractice Litigation - Mallery & Stern"
+                  className="w-full h-auto aspect-square object-cover block group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/40 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
@@ -517,23 +469,15 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuote }) => {
               </div>
             </div>
 
-            {/* Right Visual Card */}
+            {/* Right Visual Image */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-lg bg-[#F9FAFB] border border-zinc-200 rounded-2xl p-8 space-y-6 shadow-md">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0E336B] flex items-center justify-center">
-                  <ShieldCheck className="w-8 h-8 text-[#2D8CFF]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0E336B]">
-                  Maximizing Your Full Recovery:
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                  While workers' compensation does not pay general damages for pain and suffering, our dual-track litigation approach identifies every negligent third party to recover both economic and non-economic damages.
-                </p>
-                <div className="p-4 bg-white border border-zinc-200 rounded-xl text-xs text-[#0E336B] font-semibold space-y-1.5">
-                  <p>• Lifetime medical care funding</p>
-                  <p>• Total lost future earnings &amp; benefits</p>
-                  <p>• Physical pain and emotional trauma damages</p>
-                </div>
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-zinc-900 group">
+                <img
+                  src="/bodily_injury_service.jpg"
+                  alt="Serious Bodily Injury & Catastrophic Accidents - Mallery & Stern"
+                  className="w-full h-auto aspect-square object-cover block group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E336B]/40 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
