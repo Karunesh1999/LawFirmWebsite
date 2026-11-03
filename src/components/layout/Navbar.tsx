@@ -54,6 +54,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       return;
     }
 
+    if (elementId === 'services') {
+      navigate('/services');
+      return;
+    }
+
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -200,7 +205,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
             <button
               onClick={() => scrollTo('services')}
               className={`px-3 py-2 rounded transition-colors ${
-                activeSection === 'services' ? 'bg-[#09234B] text-white' : 'hover:bg-[#123E80] text-zinc-100'
+                location.pathname === '/services' || location.pathname === '/our-services' || activeSection === 'services'
+                  ? 'bg-[#09234B] text-white'
+                  : 'hover:bg-[#123E80] text-zinc-100'
               }`}
             >
               OUR SERVICES
