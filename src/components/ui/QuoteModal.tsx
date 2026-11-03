@@ -59,7 +59,7 @@ export const QuoteModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
 
         {submitted ? (
           <div className="p-8 text-center space-y-5">
-            <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto border border-emerald-200">
+            <div className="w-16 h-16 bg-blue-50 text-[#2D8CFF] rounded-full flex items-center justify-center mx-auto border border-blue-200">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h4 className="text-2xl font-black text-[#0E336B]">Consultation Request Received</h4>
@@ -175,7 +175,7 @@ export const QuoteModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-200">
               <div className="flex items-center gap-2 text-xs text-zinc-500">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                <ShieldCheck className="w-4 h-4 text-[#2D8CFF]" />
                 <span>No fee unless we win • Hablamos Español</span>
               </div>
               <button

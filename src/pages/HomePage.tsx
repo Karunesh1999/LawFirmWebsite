@@ -61,11 +61,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                 Specialists That
               </h1>
 
-              {/* Cursive script "can help you" with Green Underline */}
+              {/* Cursive script "can help you" with Subtle Navy Underline */}
               <div className="pt-1">
                 <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1E3A8A] font-serif italic tracking-wide lowercase inline-block relative pr-6">
                   can help you
-                  <span className="block w-full h-1.5 bg-[#2ECC71] mt-1.5 rounded-full shadow-[0_0_10px_rgba(46,204,113,0.7)]"></span>
+                  <span className="block w-full h-1 bg-[#2D8CFF] mt-1.5 rounded-full shadow-sm"></span>
                 </span>
               </div>
 
@@ -145,19 +145,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
               {/* Consultation Features List */}
               <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold text-[#1F2937]">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2D8CFF]" />
                   <span>No Recovery, No Attorney Fee</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2D8CFF]" />
                   <span>Free Confidential Case Review</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2D8CFF]" />
                   <span>Se Habla Español</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#2ECC71]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2D8CFF]" />
                   <span>No Office Visit Needed</span>
                 </div>
               </div>
@@ -471,7 +471,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
 
             <div className="bg-white border border-zinc-200 rounded-xl p-6 space-y-4 shadow-sm">
               <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#0E336B] flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5 text-[#2ECC71]" />
+                <ShieldCheck className="w-5 h-5 text-[#2D8CFF]" />
               </div>
               <h3 className="font-bold text-lg text-[#0E336B]">
                 Medical Treatment Rights
