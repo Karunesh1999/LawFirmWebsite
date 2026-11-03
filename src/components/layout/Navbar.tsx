@@ -187,27 +187,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
               </button>
 
               {aboutDropdownOpen && (
-                <div className="absolute top-full left-0 mt-0.5 w-64 bg-[#09234B] border border-blue-900 shadow-2xl py-2 z-50 rounded-b-lg">
+                <div className="absolute top-full left-0 mt-0.5 w-64 bg-white border border-zinc-200 shadow-xl py-2 z-50 rounded-b-lg">
                   <button
                     onClick={() => scrollTo('about')}
-                    className="w-full text-left block px-4 py-2.5 text-xs text-zinc-200 hover:bg-[#123E80] hover:text-white"
+                    className="w-full text-left block px-4 py-2.5 text-xs text-[#0E336B] hover:bg-zinc-50 hover:text-[#2D8CFF] transition-colors"
                   >
-                    <span className="block font-bold">About Mallery &amp; Stern</span>
-                    <span className="text-[10px] text-blue-200">We Are Here For You</span>
+                    <span className="block font-bold">ATTORNEYS</span>
+                    <span className="text-[10px] text-zinc-500">About Mallery &amp; Stern</span>
                   </button>
                   <button
-                    onClick={() => scrollTo('mission')}
-                    className="w-full text-left block px-4 py-2.5 text-xs text-zinc-200 hover:bg-[#123E80] hover:text-white"
+                    onClick={() => scrollTo('about')}
+                    className="w-full text-left block px-4 py-2.5 text-xs text-[#0E336B] hover:bg-zinc-50 hover:text-[#2D8CFF] transition-colors"
                   >
-                    <span className="block font-bold">Our Heritage Since 1976</span>
-                    <span className="text-[10px] text-blue-200">Representing California Injured Workers</span>
+                    <span className="block font-bold">OUR TEAM</span>
+                    <span className="text-[10px] text-zinc-500">Our Heritage Since 1976</span>
                   </button>
                   <button
-                    onClick={() => scrollTo('representation')}
-                    className="w-full text-left block px-4 py-2.5 text-xs text-zinc-200 hover:bg-[#123E80] hover:text-white"
+                    onClick={() => scrollTo('contact')}
+                    className="w-full text-left block px-4 py-2.5 text-xs text-[#0E336B] hover:bg-zinc-50 hover:text-[#2D8CFF] transition-colors"
                   >
-                    <span className="block font-bold">Lawrence I. Stern</span>
-                    <span className="text-[10px] text-blue-200">Rated by Super Lawyers 10 Years</span>
+                    <span className="block font-bold">LOCATIONS</span>
+                    <span className="text-[10px] text-zinc-500">Los Angeles &amp; Rancho Cucamonga</span>
                   </button>
                 </div>
               )}
