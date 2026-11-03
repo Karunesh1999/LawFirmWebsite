@@ -4,7 +4,6 @@ import {
   Printer,
   MapPin,
   Clock,
-  ArrowRight,
   ShieldCheck,
   ChevronRight
 } from 'lucide-react';
@@ -52,36 +51,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuote }) => {
 
   return (
     <footer className="w-full bg-[#071B38] text-white border-t-4 border-[#0E336B] transition-colors">
-      {/* Top Consultation CTA Banner inside Footer */}
-      <div className="w-full bg-gradient-to-r from-[#0A264F] via-[#0E336B] to-[#0A264F] py-8 border-b border-blue-900/60">
-        <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase font-display">
-              Hurt on the Job in Southern California?
-            </h3>
-            <p className="text-xs sm:text-sm text-blue-200">
-              Free, confidential case consultation with our workers' compensation trial team. No recovery, no attorney fee.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <button
-              onClick={onOpenQuote}
-              className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 rounded shadow-lg transition-all active:scale-95 flex items-center gap-2"
-            >
-              <span>Get Free Consultation</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <a
-              href="tel:3104730777"
-              className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold text-xs uppercase tracking-wider px-5 py-3.5 rounded transition-all flex items-center gap-2"
-            >
-              <Phone className="w-4 h-4 text-[#2ECC71]" />
-              <span>310-473-0777</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Multi-Column Footer Content */}
       <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 xl:gap-14">

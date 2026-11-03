@@ -554,13 +554,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
       {/* ======================================================== */}
       {/* 9. CLIENT TESTIMONIALS (Exact Match to Image 1 Nav item) */}
       {/* ======================================================== */}
-      <section id="testimonials" className="py-20 bg-[#0E336B] text-white scroll-mt-24">
+      <section id="testimonials" className="py-20 bg-white text-[#1F2937] border-t border-zinc-200 scroll-mt-24">
         <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 space-y-12">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-200">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2D8CFF]">
               Verified Client Outcomes
             </span>
-            <h2 className="text-3xl font-extrabold text-white tracking-tight uppercase font-display">
+            <h2 className="text-3xl font-extrabold text-[#0E336B] tracking-tight uppercase font-display">
               Client Testimonials
             </h2>
           </div>
@@ -586,18 +586,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
                 type: "Construction Fall Settlement"
               }
             ].map((t, i) => (
-              <div key={i} className="bg-[#09234B] border border-blue-900 rounded-xl p-6 space-y-4">
-                <div className="flex text-amber-400">
+              <div key={i} className="bg-white border border-zinc-200 rounded-xl p-6 space-y-4 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex text-amber-500">
                   {[...Array(5)].map((_, s) => (
                     <Star key={s} className="w-4 h-4 fill-current" />
                   ))}
                 </div>
-                <p className="text-xs text-blue-100 italic leading-relaxed">
+                <p className="text-xs text-zinc-600 italic leading-relaxed">
                   "{t.quote}"
                 </p>
-                <div className="pt-2 border-t border-blue-900/60">
-                  <h4 className="font-bold text-sm text-white">{t.author}</h4>
-                  <p className="text-[11px] text-blue-300">{t.location} • {t.type}</p>
+                <div className="pt-2 border-t border-zinc-100">
+                  <h4 className="font-bold text-sm text-[#0E336B]">{t.author}</h4>
+                  <p className="text-[11px] text-zinc-500">{t.location} • {t.type}</p>
                 </div>
               </div>
             ))}
@@ -606,7 +606,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenQuote }) => {
           <div className="pt-6 text-center">
             <button
               onClick={onOpenQuote}
-              className="bg-[#2D8CFF] hover:bg-[#1C7CEE] text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded shadow-lg transition-all"
+              className="bg-[#0E336B] hover:bg-[#123E80] text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded shadow-lg transition-all"
             >
               Get Your Free Confidential Consultation
             </button>
