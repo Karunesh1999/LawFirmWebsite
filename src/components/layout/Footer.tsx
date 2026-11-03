@@ -6,8 +6,7 @@ import {
   Clock,
   ArrowRight,
   ShieldCheck,
-  ChevronRight,
-  ExternalLink
+  ChevronRight
 } from 'lucide-react';
 import { MallerySternLogo } from '../ui/MSCCLogo';
 
