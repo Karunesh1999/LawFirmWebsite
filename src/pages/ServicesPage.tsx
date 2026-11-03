@@ -61,15 +61,22 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenQuote }) => {
                 Comprehensive Legal Practice Areas • Since 1976
               </span>
 
+              {/* Original Services Tagline with Reference Image Style (Uppercase + Cursive Underline) */}
               <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-[#0E336B] tracking-tight uppercase leading-[1.08] sm:leading-[1.04] font-display drop-shadow-sm">
-                Aggressive <br />
-                <span className="text-[#2D8CFF]">Representation</span> <br />
-                For Injured Workers
+                Aggressive Legal <br />
+                Representation
               </h1>
 
-              <div className="w-16 h-1 bg-[#2D8CFF] rounded-full"></div>
+              {/* Cursive script with Blue Underline matching Reference Image Style */}
+              <div className="pt-1">
+                <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1E3A8A] font-serif italic tracking-wide lowercase inline-block relative pr-6">
+                  for injured workers
+                  <span className="block w-full h-1 bg-[#2D8CFF] mt-1.5 rounded-full shadow-sm"></span>
+                </span>
+              </div>
 
-              <p className="text-sm sm:text-base text-zinc-800 pt-1 leading-relaxed font-medium">
+              {/* Lead Paragraph */}
+              <p className="text-sm sm:text-base text-zinc-800 pt-2 leading-relaxed font-medium">
                 At Mallery &amp; Stern, we provide vigorous, ethical, and experienced trial representation across Southern California. Whether you were hurt on the job, faced workplace retaliation, or suffered severe physical trauma, our trial attorneys protect your legal rights and maximize your recovery.
               </p>
 

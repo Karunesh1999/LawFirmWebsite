@@ -59,18 +59,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuote }) => {
             <div className="w-full max-w-xl md:max-w-2xl xl:max-w-3xl space-y-4 sm:space-y-5">
 
 
-              {/* Exact Tagline & Heading Style matching HomePage */}
+              {/* Original About Page Tagline with Reference Image Style (Uppercase + Cursive Underline) */}
               <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-[#0E336B] tracking-tight uppercase leading-[1.08] sm:leading-[1.04] font-display drop-shadow-sm">
                 We Represent <br />
-                <span className="text-[#2D8CFF]">People Injured</span> <br />
-                On The Job
+                People Injured
               </h1>
 
-              {/* Accent Line matching HomePage */}
-              <div className="w-16 h-1 bg-[#2D8CFF] rounded-full"></div>
+              {/* Cursive script with Blue Underline matching Reference Image Style */}
+              <div className="pt-1">
+                <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1E3A8A] font-serif italic tracking-wide lowercase inline-block relative pr-6">
+                  on the job
+                  <span className="block w-full h-1 bg-[#2D8CFF] mt-1.5 rounded-full shadow-sm"></span>
+                </span>
+              </div>
 
-              {/* Main Lead Paragraph */}
-              <p className="text-sm sm:text-base text-zinc-800 pt-1 leading-relaxed font-medium">
+              {/* Lead Paragraph */}
+              <p className="text-sm sm:text-base text-zinc-800 pt-2 leading-relaxed font-medium">
                 We represent people injured physically and psychologically from work as well as caused by accidents related to work. Mallery &amp; Stern provides a vigorous and ethical representation of our clients in a manner designed to get you the results you are entitled to.
               </p>
 
