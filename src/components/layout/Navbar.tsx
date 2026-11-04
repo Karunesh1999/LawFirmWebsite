@@ -175,7 +175,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote }) => {
       {/* ======================================================== */}
       {/* Tier 2: Solid Navy Blue Navigation Bar (Image 1: #0E336B) */}
       {/* ======================================================== */}
-      <nav className="w-full bg-[#0E336B] text-white">
+      <nav className="hidden xl:block w-full bg-[#0E336B] text-white">
         <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 flex items-center justify-between">
           {/* Desktop Nav Items (Exact 9 items from Image 1) */}
           <div className="hidden xl:flex items-center gap-1 xl:gap-2 py-1 text-xs font-bold uppercase tracking-wider">
